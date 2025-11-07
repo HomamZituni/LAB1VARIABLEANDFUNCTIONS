@@ -39,3 +39,19 @@ return "You are not eligible";
 console.log(checkEligibility(20, true));  
 console.log(checkEligibility(20, false)); 
 console.log(checkEligibility(16, true));  
+
+
+//Task 4
+function calculateTotalCost(price, quantity, taxRate, discount) {
+discount = discount || 0;     
+if (isNaN(price) || isNaN(quantity) || isNaN(taxRate) || isNaN(discount)) {
+return "Invalid input.";
+} 
+let totalCost = (price *quantity - discount) * (1 + taxRate)
+return totalCost;
+}
+
+console.log(calculateTotalCost(10, 2, 0.1));   
+console.log(calculateTotalCost(10, 2, 0.1, 5)); 
+
+
