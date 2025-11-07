@@ -1,3 +1,4 @@
+//Task 1
 function formatFullName(firstName, lastName) {
     if (!firstName || !lastName) {
         return "Invalid name input.";
@@ -10,6 +11,15 @@ return `${formattedLast}, ${formattedFirst}`;
 
 }
 
-
-
 console.log(formatFullName("Homam","Zituni"));
+
+//Task 2
+function calculateTotalCost(price,quantity,taxRate) {
+if (isNaN(price) || isNaN(quantity) || isNaN(taxRate)) {
+return "Invalid Input.";
+}
+let totalCost = (price * quantity) * (1 + taxRate);
+return totalCost;
+}
+
+console.log(calculateTotalCost(10, 2, 0.1));
